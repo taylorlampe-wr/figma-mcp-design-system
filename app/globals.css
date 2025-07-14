@@ -1,7 +1,7 @@
 /* Colors */
+
+/* Color primitives */
 :root {
-  /* Color primitives */
-  
   /* Blues */
   --blue-800: rgb(5%, 31%, 84%);
   --blue-700: rgb(5%, 37%, 91%);
@@ -75,27 +75,24 @@
   --pink-400: rgb(93%, 45%, 89%);
   --pink-300: rgb(95%, 70%, 95%);
   --pink-200: rgb(96%, 86%, 97%);
+}
 
-  /* Semantic Colors */
+/* Semantic Colors */
+:root {
   --backdrop-overlay: rgba(0, 0, 0, 0.5);
-
   --border-divider: var(--neutral-200);
-
   --background-primary: var(--white);
   --background-secondary: var(--neutral-100);
   --background-tertiary: var(--neutral-200);
-
   --text-primary: var(--neutral-800);
   --text-secondary: var(--neutral-500);
   --text-disabled: var(--neutral-300);
-
   --action-primary: var(--blue-600);
   --action-primary-hover: var(--blue-700);
   --action-destructive: var(--red-600);
   --action-destructive-hover: var(--red-700);
   --action-disabled: var(--neutral-200);
   --action-on-background: var(--white);
-
   --alert-error-icon: var(--red-600);
   --alert-error-background: var(--red-200);
   --alert-success-icon: var(--green-600);
@@ -104,7 +101,6 @@
   --alert-info-background: var(--blue-200);
   --alert-warning-icon: var(--yellow-600);
   --alert-warning-background: var(--yellow-200);
-
   --tooltip-background: var(--neutral-800);
   --tooltip-text: var(--white);
 }
@@ -114,25 +110,20 @@
   --background-primary: var(--neutral-800);
   --background-secondary: var(--neutral-700);
   --background-tertiary: var(--neutral-600);
-
   --text-primary: var(--white);
   --text-secondary: var(--neutral-300);
   --text-disabled: var(--neutral-500);
-
   --border-divider: var(--neutral-600);
-
   --action-primary: var(--blue-500);
   --action-primary-hover: var(--blue-400);
   --action-destructive: var(--red-500);
   --action-destructive-hover: var(--red-400);
   --action-disabled: var(--neutral-600);
   --action-on-background: var(--neutral-800);
-
   --alert-error-background: var(--red-800);
   --alert-success-background: var(--green-800);
   --alert-info-background: var(--blue-800);
   --alert-warning-background: var(--yellow-800);
-
   --tooltip-background: var(--white);
   --tooltip-text: var(--neutral-800);
 }

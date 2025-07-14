@@ -18,6 +18,12 @@ const navigation: NavSection[] = [
     items: [
       { title: 'Theme', href: '/theme' },
     ]
+  },
+  {
+    title: 'Inputs',
+    items: [
+      { title: 'Interactive Chip', href: '/inputs/chip' },
+    ]
   }
 ]
 

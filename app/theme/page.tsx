@@ -150,8 +150,10 @@ const COLOR_TOKENS: ColorGroup[] = [
       { name: '300', variable: '--pink-300' },
       { name: '200', variable: '--pink-200' }
     ]
-  },
-  // Semantic Colors
+  }
+];
+
+const SEMANTIC_COLORS: ColorGroup[] = [
   {
     name: 'Backdrop',
     colors: [
@@ -641,67 +643,7 @@ const SECTIONS = [
         id: 'semantic',
         title: 'Component Colors',
         description: 'Component-specific colors that define interactive and functional elements of the interface.',
-        content: [
-          {
-            name: 'Background',
-            colors: [
-              { name: 'Primary', variable: '--background-primary', description: 'Maps to White' },
-              { name: 'Secondary', variable: '--background-secondary', description: 'Maps to Neutral 100' },
-              { name: 'Tertiary', variable: '--background-tertiary', description: 'Maps to Neutral 200' }
-            ]
-          },
-          {
-            name: 'Text',
-            colors: [
-              { name: 'Primary', variable: '--text-primary', description: 'Maps to Neutral 800' },
-              { name: 'Secondary', variable: '--text-secondary', description: 'Maps to Neutral 500' },
-              { name: 'Disabled', variable: '--text-disabled', description: 'Maps to Neutral 300' }
-            ]
-          },
-          {
-            name: 'Actions',
-            colors: [
-              { name: 'Primary', variable: '--action-primary', description: 'Maps to Blue 600' },
-              { name: 'Primary Hover', variable: '--action-primary-hover', description: 'Maps to Blue 700' },
-              { name: 'Destructive', variable: '--action-destructive', description: 'Maps to Red 600' },
-              { name: 'Destructive Hover', variable: '--action-destructive-hover', description: 'Maps to Red 700' },
-              { name: 'Disabled', variable: '--action-disabled', description: 'Maps to Neutral 200' },
-              { name: 'On Background', variable: '--action-on-background', description: 'Maps to White' }
-            ]
-          },
-          {
-            name: 'Alerts',
-            colors: [
-              { name: 'Error Icon', variable: '--alert-error-icon', description: 'Maps to Red 600' },
-              { name: 'Error Background', variable: '--alert-error-background', description: 'Maps to Red 200' },
-              { name: 'Success Icon', variable: '--alert-success-icon', description: 'Maps to Green 600' },
-              { name: 'Success Background', variable: '--alert-success-background', description: 'Maps to Green 200' },
-              { name: 'Info Icon', variable: '--alert-info-icon', description: 'Maps to Blue 600' },
-              { name: 'Info Background', variable: '--alert-info-background', description: 'Maps to Blue 200' },
-              { name: 'Warning Icon', variable: '--alert-warning-icon', description: 'Maps to Yellow 600' },
-              { name: 'Warning Background', variable: '--alert-warning-background', description: 'Maps to Yellow 200' }
-            ]
-          },
-          {
-            name: 'Tooltip',
-            colors: [
-              { name: 'Background', variable: '--tooltip-background', description: 'Maps to Neutral 800' },
-              { name: 'Text', variable: '--tooltip-text', description: 'Maps to White' }
-            ]
-          },
-          {
-            name: 'Border',
-            colors: [
-              { name: 'Divider', variable: '--border-divider', description: 'Maps to Neutral 200' }
-            ]
-          },
-          {
-            name: 'Backdrop',
-            colors: [
-              { name: 'Overlay', variable: '--backdrop-overlay', description: 'Maps to 50% Black' }
-            ]
-          }
-        ]
+        content: SEMANTIC_COLORS
       }
     ]
   },
