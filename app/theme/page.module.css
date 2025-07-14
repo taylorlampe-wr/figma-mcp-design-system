@@ -172,48 +172,56 @@
 /* Typography styles */
 .typeStyles {
   display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.typeItem {
+  flex: 1;
+  min-width: 200px;
+  max-width: 200px;
+  display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.typeExample {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  padding: 1.5rem;
-  border: 1px solid var(--neutral-200);
   border-radius: 8px;
-  background-color: var(--background-secondary);
-}
-
-.typeDetails {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0.75rem 1.5rem;
-  align-content: start;
-  padding-right: 2rem;
-  border-right: 1px solid var(--neutral-200);
-}
-
-.typeDetailLabel {
-  font-size: var(--font-size-caption);
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.typeDetailValue {
-  font-size: var(--font-size-body2);
-  color: var(--text-primary);
-  font-weight: var(--font-weight-medium);
-  font-family: monospace;
+  overflow: hidden;
+  border: 1px solid var(--neutral-200);
 }
 
 .typePreview {
+  width: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  justify-content: center;
+  background-color: var(--background-secondary);
+}
+
+.typeInfo {
+  padding: 8px 12px;
   background-color: var(--background-primary);
-  border-radius: 4px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.typeName {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body2);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.typeSpecs {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.typeSpec {
+  font-size: var(--font-size-caption);
+  color: var(--text-secondary);
+  line-height: var(--line-height-caption);
 }
 
 /* Spacing styles */
@@ -261,11 +269,16 @@
 
 .spacingPreview {
   width: 100%;
-  height: 40px;
+  height: 120px; /* Increase height to better show radius */
   background-color: var(--background-primary);
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-4);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .spacingBlock {
@@ -277,11 +290,16 @@
 }
 
 .radiusBlock {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  background-color: var(--action-primary);
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border: 2px solid var(--action-primary);
+  box-sizing: border-box;
+}
+
+/* Add radius tokens grid */
+.radiusTokens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
 } 

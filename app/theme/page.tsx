@@ -51,6 +51,108 @@ interface RadiusToken {
 
 const COLOR_TOKENS: ColorGroup[] = [
   {
+    name: 'Blues',
+    colors: [
+      { name: '800', variable: '--blue-800' },
+      { name: '700', variable: '--blue-700' },
+      { name: '600', variable: '--blue-600' },
+      { name: '500', variable: '--blue-500' },
+      { name: '400', variable: '--blue-400' },
+      { name: '300', variable: '--blue-300' },
+      { name: '200', variable: '--blue-200' }
+    ]
+  },
+  {
+    name: 'Neutrals',
+    colors: [
+      { name: '800', variable: '--neutral-800', description: 'Black' },
+      { name: '700', variable: '--neutral-700' },
+      { name: '600', variable: '--neutral-600' },
+      { name: '500', variable: '--neutral-500' },
+      { name: '400', variable: '--neutral-400' },
+      { name: '300', variable: '--neutral-300' },
+      { name: '200', variable: '--neutral-200' },
+      { name: '100', variable: '--neutral-100' },
+      { name: 'White', variable: '--white' }
+    ]
+  },
+  {
+    name: 'Teals',
+    colors: [
+      { name: '800', variable: '--teal-800' },
+      { name: '600', variable: '--teal-600' },
+      { name: '500', variable: '--teal-500' },
+      { name: '400', variable: '--teal-400' },
+      { name: '300', variable: '--teal-300' },
+      { name: '200', variable: '--teal-200' }
+    ]
+  },
+  {
+    name: 'Greens',
+    colors: [
+      { name: '800', variable: '--green-800' },
+      { name: '600', variable: '--green-600' },
+      { name: '500', variable: '--green-500' },
+      { name: '400', variable: '--green-400' },
+      { name: '300', variable: '--green-300' },
+      { name: '200', variable: '--green-200' }
+    ]
+  },
+  {
+    name: 'Reds',
+    colors: [
+      { name: '800', variable: '--red-800' },
+      { name: '700', variable: '--red-700' },
+      { name: '600', variable: '--red-600' },
+      { name: '500', variable: '--red-500' },
+      { name: '400', variable: '--red-400' },
+      { name: '300', variable: '--red-300' },
+      { name: '200', variable: '--red-200' }
+    ]
+  },
+  {
+    name: 'Yellows',
+    colors: [
+      { name: '800', variable: '--yellow-800' },
+      { name: '600', variable: '--yellow-600' },
+      { name: '500', variable: '--yellow-500' },
+      { name: '400', variable: '--yellow-400' },
+      { name: '300', variable: '--yellow-300' },
+      { name: '200', variable: '--yellow-200' }
+    ]
+  },
+  {
+    name: 'Chartreuse',
+    colors: [
+      { name: '600', variable: '--chartreuse-600' },
+      { name: '500', variable: '--chartreuse-500' },
+      { name: '400', variable: '--chartreuse-400' },
+      { name: '300', variable: '--chartreuse-300' },
+      { name: '200', variable: '--chartreuse-200' }
+    ]
+  },
+  {
+    name: 'Purples',
+    colors: [
+      { name: '600', variable: '--purple-600' },
+      { name: '500', variable: '--purple-500' },
+      { name: '400', variable: '--purple-400' },
+      { name: '300', variable: '--purple-300' },
+      { name: '200', variable: '--purple-200' }
+    ]
+  },
+  {
+    name: 'Pinks',
+    colors: [
+      { name: '600', variable: '--pink-600' },
+      { name: '500', variable: '--pink-500' },
+      { name: '400', variable: '--pink-400' },
+      { name: '300', variable: '--pink-300' },
+      { name: '200', variable: '--pink-200' }
+    ]
+  },
+  // Semantic Colors
+  {
     name: 'Backdrop',
     colors: [
       { name: 'Overlay', variable: '--backdrop-overlay', description: 'Used for modal/dialog backgrounds' }
@@ -229,7 +331,7 @@ const componentStyles: TypeStyle[] = [
     specs: {
       size: '16px',
       lineHeight: '150%',
-      weight: 'Semibold'
+      weight: '600'
     }
   },
   {
@@ -238,7 +340,7 @@ const componentStyles: TypeStyle[] = [
     specs: {
       size: '16px',
       lineHeight: '20px',
-      weight: 'Regular'
+      weight: '400'
     }
   },
   {
@@ -247,7 +349,124 @@ const componentStyles: TypeStyle[] = [
     specs: {
       size: '12px',
       lineHeight: '20px',
-      weight: 'Regular'
+      weight: '400'
+    }
+  },
+  {
+    name: 'Button Large',
+    className: 'button-large',
+    specs: {
+      size: '16px',
+      lineHeight: '24px',
+      weight: '600'
+    }
+  },
+  {
+    name: 'Button Medium',
+    className: 'button-medium',
+    specs: {
+      size: '14px',
+      lineHeight: '24px',
+      weight: '600'
+    }
+  },
+  {
+    name: 'Button Small',
+    className: 'button-small',
+    specs: {
+      size: '12px',
+      lineHeight: '22px',
+      weight: '600'
+    }
+  },
+  {
+    name: 'Input Label',
+    className: 'input-label',
+    specs: {
+      size: '12px',
+      lineHeight: '12px',
+      weight: '500'
+    }
+  },
+  {
+    name: 'Helper Text',
+    className: 'helper-text',
+    specs: {
+      size: '12px',
+      lineHeight: '20px',
+      weight: '400'
+    }
+  },
+  {
+    name: 'Chip',
+    className: 'chip',
+    specs: {
+      size: '14px',
+      lineHeight: '18px',
+      weight: '500'
+    }
+  },
+  {
+    name: 'Tooltip',
+    className: 'tooltip',
+    specs: {
+      size: '14px',
+      lineHeight: '150%',
+      weight: '400'
+    }
+  },
+  {
+    name: 'Table Header',
+    className: 'table-header',
+    specs: {
+      size: '16px',
+      lineHeight: '24px',
+      weight: '600'
+    }
+  },
+  {
+    name: 'Menu Item',
+    className: 'menu-item',
+    specs: {
+      size: '16px',
+      lineHeight: '150%',
+      weight: '400'
+    }
+  },
+  {
+    name: 'Menu Item Dense',
+    className: 'menu-item-dense',
+    specs: {
+      size: '14px',
+      lineHeight: '18px',
+      weight: '400'
+    }
+  },
+  {
+    name: 'List Subheader',
+    className: 'list-subheader',
+    specs: {
+      size: '14px',
+      lineHeight: '48px',
+      weight: '500'
+    }
+  },
+  {
+    name: 'Bottom Nav',
+    className: 'bottom-nav',
+    specs: {
+      size: '14px',
+      lineHeight: '166%',
+      weight: '400'
+    }
+  },
+  {
+    name: 'Input Text',
+    className: 'input-text',
+    specs: {
+      size: '16px',
+      lineHeight: '24px',
+      weight: '400'
     }
   }
 ];
@@ -287,28 +506,34 @@ const SPACING_TOKENS: SpacingToken[] = [
 
 const RADIUS_TOKENS: RadiusToken[] = [
   {
-    name: 'Radius 4',
-    variable: '--radius-4',
-    value: '4px',
-    description: 'Used for small elements like buttons and inputs'
+    name: 'Radius 0',
+    variable: '--radius-0',
+    value: '0px',
+    description: 'Used for square corners'
   },
   {
     name: 'Radius 8',
     variable: '--radius-8',
     value: '8px',
-    description: 'Used for cards and larger containers'
+    description: 'Used for small rounded corners'
   },
   {
     name: 'Radius 12',
     variable: '--radius-12',
     value: '12px',
-    description: 'Used for modals and floating elements'
+    description: 'Used for standard rounded corners'
   },
   {
     name: 'Radius 16',
     variable: '--radius-16',
     value: '16px',
-    description: 'Used for large containers'
+    description: 'Used for large rounded corners'
+  },
+  {
+    name: 'Radius Pill',
+    variable: '--radius-pill',
+    value: '999px',
+    description: 'Used for fully rounded / pill shapes'
   }
 ];
 
@@ -360,7 +585,6 @@ function ColorSwatch({ color }: { color: { name: string; variable: string; descr
       />
       <div className={styles.colorInfo}>
         <h3 className={styles.colorName}>{color.name}</h3>
-        <code className={styles.colorVariable}>{color.variable}</code>
         {color.description && (
           <p className={styles.colorDescription}>{color.description}</p>
         )}
@@ -384,21 +608,19 @@ function ColorGroup({ group }: { group: ColorGroup }) {
 
 function TypeExample({ style }: { style: TypeStyle }) {
   return (
-    <div className={styles.typeExample}>
-      <div className={styles.typeDetails}>
-        <span className={styles.typeDetailLabel}>Name</span>
-        <span className={styles.typeDetailValue}>{style.name}</span>
-        <span className={styles.typeDetailLabel}>Size</span>
-        <span className={styles.typeDetailValue}>{style.specs.size}</span>
-        <span className={styles.typeDetailLabel}>Line Height</span>
-        <span className={styles.typeDetailValue}>{style.specs.lineHeight}</span>
-        <span className={styles.typeDetailLabel}>Weight</span>
-        <span className={styles.typeDetailValue}>{style.specs.weight}</span>
-      </div>
+    <div className={styles.typeItem}>
       <div className={styles.typePreview}>
         <span className={style.className}>
-          The quick brown fox jumps over the lazy dog
+          Abc
         </span>
+      </div>
+      <div className={styles.typeInfo}>
+        <h3 className={styles.typeName}>{style.name}</h3>
+        <div className={styles.typeSpecs}>
+          <span className={styles.typeSpec}>Size: {style.specs.size}</span>
+          <span className={styles.typeSpec}>Line Height: {style.specs.lineHeight}</span>
+          <span className={styles.typeSpec}>Weight: {style.specs.weight}</span>
+        </div>
       </div>
     </div>
   );
@@ -412,18 +634,74 @@ const SECTIONS = [
       {
         id: 'palette',
         title: 'Palette',
-        description: 'Our semantic color tokens provide consistent meaning across the interface.',
-        content: COLOR_TOKENS.filter(g => 
-          ['Background', 'Text', 'Border'].includes(g.name)
-        )
+        description: 'Our color primitives form the foundation of our design system.',
+        content: COLOR_TOKENS
       },
       {
-        id: 'component',
-        title: 'Component',
-        description: 'Colors used specifically in UI components.',
-        content: COLOR_TOKENS.filter(g => 
-          ['Actions', 'Alerts', 'Tooltip', 'Backdrop'].includes(g.name)
-        )
+        id: 'semantic',
+        title: 'Component Colors',
+        description: 'Component-specific colors that define interactive and functional elements of the interface.',
+        content: [
+          {
+            name: 'Background',
+            colors: [
+              { name: 'Primary', variable: '--background-primary', description: 'Maps to White' },
+              { name: 'Secondary', variable: '--background-secondary', description: 'Maps to Neutral 100' },
+              { name: 'Tertiary', variable: '--background-tertiary', description: 'Maps to Neutral 200' }
+            ]
+          },
+          {
+            name: 'Text',
+            colors: [
+              { name: 'Primary', variable: '--text-primary', description: 'Maps to Neutral 800' },
+              { name: 'Secondary', variable: '--text-secondary', description: 'Maps to Neutral 500' },
+              { name: 'Disabled', variable: '--text-disabled', description: 'Maps to Neutral 300' }
+            ]
+          },
+          {
+            name: 'Actions',
+            colors: [
+              { name: 'Primary', variable: '--action-primary', description: 'Maps to Blue 600' },
+              { name: 'Primary Hover', variable: '--action-primary-hover', description: 'Maps to Blue 700' },
+              { name: 'Destructive', variable: '--action-destructive', description: 'Maps to Red 600' },
+              { name: 'Destructive Hover', variable: '--action-destructive-hover', description: 'Maps to Red 700' },
+              { name: 'Disabled', variable: '--action-disabled', description: 'Maps to Neutral 200' },
+              { name: 'On Background', variable: '--action-on-background', description: 'Maps to White' }
+            ]
+          },
+          {
+            name: 'Alerts',
+            colors: [
+              { name: 'Error Icon', variable: '--alert-error-icon', description: 'Maps to Red 600' },
+              { name: 'Error Background', variable: '--alert-error-background', description: 'Maps to Red 200' },
+              { name: 'Success Icon', variable: '--alert-success-icon', description: 'Maps to Green 600' },
+              { name: 'Success Background', variable: '--alert-success-background', description: 'Maps to Green 200' },
+              { name: 'Info Icon', variable: '--alert-info-icon', description: 'Maps to Blue 600' },
+              { name: 'Info Background', variable: '--alert-info-background', description: 'Maps to Blue 200' },
+              { name: 'Warning Icon', variable: '--alert-warning-icon', description: 'Maps to Yellow 600' },
+              { name: 'Warning Background', variable: '--alert-warning-background', description: 'Maps to Yellow 200' }
+            ]
+          },
+          {
+            name: 'Tooltip',
+            colors: [
+              { name: 'Background', variable: '--tooltip-background', description: 'Maps to Neutral 800' },
+              { name: 'Text', variable: '--tooltip-text', description: 'Maps to White' }
+            ]
+          },
+          {
+            name: 'Border',
+            colors: [
+              { name: 'Divider', variable: '--border-divider', description: 'Maps to Neutral 200' }
+            ]
+          },
+          {
+            name: 'Backdrop',
+            colors: [
+              { name: 'Overlay', variable: '--backdrop-overlay', description: 'Maps to 50% Black' }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -459,12 +737,12 @@ const SECTIONS = [
   },
   {
     id: 'radius',
-    title: 'Radius',
+    title: 'Corner Radius',
     subsections: [
       {
         id: 'radius',
         title: 'Corner Radius',
-        description: 'Border radius values for consistent component shapes.',
+        description: 'A set of border radius values for consistent component shapes.',
         content: RADIUS_TOKENS
       }
     ]
@@ -480,47 +758,41 @@ export default function ThemePage() {
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
   };
 
-  const renderContent = (subsection: Subsection) => {
-    if (subsection.id === 'palette' || subsection.id === 'component') {
-      return (
-        <div className={styles.colorGroups}>
-          {(subsection.content as ColorGroup[]).map((group) => (
-            <ColorGroup key={group.name} group={group} />
-          ))}
-        </div>
-      );
+  const renderContent = (content: any) => {
+    if (Array.isArray(content)) {
+      if (content[0] && 'colors' in content[0]) {
+        return content.map((group) => (
+          <ColorGroup key={group.name} group={group} />
+        ));
+      } else if (content[0] && 'specs' in content[0]) {
+        return (
+          <div className={styles.typeStyles}>
+            {content.map((style) => (
+              <TypeExample key={style.name} style={style} />
+            ))}
+          </div>
+        );
+      } else if (content[0] && 'value' in content[0]) {
+        // Check if it's radius tokens
+        if (content === RADIUS_TOKENS) {
+          return (
+            <div className={styles.radiusTokens}>
+              {content.map((token) => (
+                <RadiusExample key={token.name} token={token} />
+              ))}
+            </div>
+          );
+        }
+        // Spacing tokens
+        return (
+          <div className={styles.spacingTokens}>
+            {content.map((token) => (
+              <SpacingExample key={token.name} token={token} />
+            ))}
+          </div>
+        );
+      }
     }
-
-    if (subsection.id === 'text' || subsection.id === 'component') {
-      return (
-        <div className={styles.typeStyles}>
-          {(subsection.content as TypeStyle[]).map((style) => (
-            <TypeExample key={style.name} style={style} />
-          ))}
-        </div>
-      );
-    }
-
-    if (subsection.id === 'spacing') {
-      return (
-        <div className={styles.spacingTokens}>
-          {(subsection.content as SpacingToken[]).map((token) => (
-            <SpacingExample key={token.name} token={token} />
-          ))}
-        </div>
-      );
-    }
-
-    if (subsection.id === 'radius') {
-      return (
-        <div className={styles.radiusTokens}>
-          {(subsection.content as RadiusToken[]).map((token) => (
-            <RadiusExample key={token.name} token={token} />
-          ))}
-        </div>
-      );
-    }
-
     return null;
   };
 
@@ -562,7 +834,7 @@ export default function ThemePage() {
                     {subsection.description}
                   </p>
                   <div className={styles.content}>
-                    {renderContent(subsection)}
+                    {renderContent(subsection.content)}
                   </div>
                 </div>
               ))}

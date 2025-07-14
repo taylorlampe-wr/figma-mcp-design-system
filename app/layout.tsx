@@ -13,11 +13,14 @@ export default function RootLayout({
       <head>
         <title>WDS - Web Design System</title>
         <meta name="description" content="Web Design System documentation and component library" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={styles.body}>
         <SideNav />
         <main className={styles.main}>
-          {children}
+          <div className={styles.contentContainer}>
+            {children}
+          </div>
         </main>
       </body>
     </html>

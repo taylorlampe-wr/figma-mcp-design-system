@@ -1,0 +1,13 @@
+---
+alwaysApply: true
+---
+# TARGETED UI EDITS + SYSTEMATIC COMPONENT RE-USE
+- **Scope strictly to the call-out.** When I request a tweak, locate and change only the files/lines explicitly referenced in the prompt. Do not alter other components, styles, or layout sections, and do not auto-reformat unrelated code.
+
+- **Show your homework first.** Before committing any code, emit a <plan>…</plan> list of the exact files, line numbers, and change types you intend to touch. Wait for my confirmation keyword: “ACK”. Only after “ACK” should you return the final diff.
+
+- **Prefer extension over reinvention.** Whenever you detect an existing pattern (e.g., ColorSwatch for palette tokens), generalize it into a variant-driven component (e.g., <Swatch variant="color|text|shadow">) instead of building a parallel component from scratch. Re-use props, tokens, and Storybook stories where feasible.
+
+- **Create purposeful variants.** If the current component can also convey typography, spacing, or other design-token data, expose those through clearly named props or variant enums rather than duplicating markup.
+
+- **Never introduce breaking visual or API changes without approval.** If a change would alter public props or visuals outside the requested scope, surface it in the <plan> block and wait for explicit sign-off.

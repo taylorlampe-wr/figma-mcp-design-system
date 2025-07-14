@@ -1,12 +1,46 @@
+/* Base reset */
 .body {
   margin: 0;
   padding: 0;
   background-color: var(--background-primary);
   color: var(--text-primary);
   font-family: var(--font-primary);
+  /* Use CSS Grid for layout */
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+/* Main content area */
 .main {
-  padding-left: 280px; /* Match SideNav width */
+  position: relative;
+  min-width: 0; /* Prevent content from pushing sidebar */
   min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+/* Content container for max-width and padding */
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .contentContainer {
+    padding: 1rem;
+  }
 } 
