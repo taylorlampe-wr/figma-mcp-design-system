@@ -1,0 +1,468 @@
+/* Colors */
+:root {
+  /* Color primitives */
+  
+  /* Blues */
+  --blue-800: rgb(5%, 31%, 84%);
+  --blue-700: rgb(5%, 37%, 91%);
+  --blue-600: rgb(5%, 41%, 100%);
+  --blue-500: rgb(26%, 51%, 90%);
+  --blue-400: rgb(49%, 65%, 98%);
+  --blue-300: rgb(71%, 80%, 99%);
+  --blue-200: rgb(86%, 89%, 99%);
+
+  /* Neutrals */
+  --neutral-800: rgb(7%, 7%, 7%); /* Black */
+  --neutral-700: rgb(9%, 10%, 11%);
+  --neutral-600: rgb(14%, 15%, 15%);
+  --neutral-500: rgb(27%, 28%, 29%);
+  --neutral-400: rgb(56%, 56%, 56%);
+  --neutral-300: rgb(79%, 79%, 79%);
+  --neutral-200: rgb(91%, 91%, 91%);
+  --neutral-100: rgb(97%, 97%, 96%);
+  --white: rgb(100%, 100%, 100%);
+
+  /* Teals */
+  --teal-800: rgb(0%, 42%, 51%);
+  --teal-600: rgb(0%, 67%, 81%);
+  --teal-500: rgb(0%, 80%, 97%);
+  --teal-400: rgb(47%, 85%, 97%);
+  --teal-300: rgb(67%, 91%, 98%);
+  --teal-200: rgb(86%, 95%, 99%);
+
+  /* Greens */
+  --green-800: rgb(24%, 46%, 7%);
+  --green-600: rgb(39%, 85%, 2%);
+  --green-500: rgb(52%, 94%, 18%);
+  --green-400: rgb(73%, 95%, 47%);
+  --green-300: rgb(84%, 97%, 69%);
+  --green-200: rgb(92%, 98%, 84%);
+
+  /* Reds */
+  --red-800: rgb(74%, 7%, 7%);
+  --red-700: rgb(83%, 8%, 8%);
+  --red-600: rgb(92%, 9%, 9%);
+  --red-500: rgb(100%, 27%, 27%);
+  --red-400: rgb(98%, 57%, 55%);
+  --red-300: rgb(98%, 74%, 73%);
+  --red-200: rgb(98%, 86%, 86%);
+
+  /* Yellows */
+  --yellow-800: rgb(74%, 32%, 3%);
+  --yellow-600: rgb(91%, 83%, 5%);
+  --yellow-500: rgb(100%, 91%, 7%);
+  --yellow-400: rgb(99%, 93%, 41%);
+  --yellow-300: rgb(100%, 96%, 65%);
+  --yellow-200: rgb(100%, 98%, 79%);
+
+  /* Chartreuse */
+  --chartreuse-600: rgb(65%, 85%, 1%);
+  --chartreuse-500: rgb(73%, 94%, 5%);
+  --chartreuse-400: rgb(86%, 99%, 38%);
+  --chartreuse-300: rgb(90%, 100%, 54%);
+  --chartreuse-200: rgb(96%, 100%, 78%);
+
+  /* Purples */
+  --purple-600: rgb(71%, 4%, 90%);
+  --purple-500: rgb(82%, 18%, 100%);
+  --purple-400: rgb(82%, 46%, 98%);
+  --purple-300: rgb(89%, 68%, 99%);
+  --purple-200: rgb(93%, 85%, 99%);
+
+  /* Pinks */
+  --pink-600: rgb(88%, 3%, 76%);
+  --pink-500: rgb(100%, 9%, 86%);
+  --pink-400: rgb(93%, 45%, 89%);
+  --pink-300: rgb(95%, 70%, 95%);
+  --pink-200: rgb(96%, 86%, 97%);
+
+  /* Semantic Colors */
+  --backdrop-overlay: rgba(0, 0, 0, 0.5);
+
+  --border-divider: var(--neutral-200);
+
+  --background-primary: var(--white);
+  --background-secondary: var(--neutral-100);
+  --background-tertiary: var(--neutral-200);
+
+  --text-primary: var(--neutral-800);
+  --text-secondary: var(--neutral-500);
+  --text-disabled: var(--neutral-300);
+
+  --action-primary: var(--blue-600);
+  --action-primary-hover: var(--blue-700);
+  --action-destructive: var(--red-600);
+  --action-destructive-hover: var(--red-700);
+  --action-disabled: var(--neutral-200);
+  --action-on-background: var(--white);
+
+  --alert-error-icon: var(--red-600);
+  --alert-error-background: var(--red-200);
+  --alert-success-icon: var(--green-600);
+  --alert-success-background: var(--green-200);
+  --alert-info-icon: var(--blue-600);
+  --alert-info-background: var(--blue-200);
+  --alert-warning-icon: var(--yellow-600);
+  --alert-warning-background: var(--yellow-200);
+
+  --tooltip-background: var(--neutral-800);
+  --tooltip-text: var(--white);
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --background-primary: var(--neutral-800);
+  --background-secondary: var(--neutral-700);
+  --background-tertiary: var(--neutral-600);
+
+  --text-primary: var(--white);
+  --text-secondary: var(--neutral-300);
+  --text-disabled: var(--neutral-500);
+
+  --border-divider: var(--neutral-600);
+
+  --action-primary: var(--blue-500);
+  --action-primary-hover: var(--blue-400);
+  --action-destructive: var(--red-500);
+  --action-destructive-hover: var(--red-400);
+  --action-disabled: var(--neutral-600);
+  --action-on-background: var(--neutral-800);
+
+  --alert-error-background: var(--red-800);
+  --alert-success-background: var(--green-800);
+  --alert-info-background: var(--blue-800);
+  --alert-warning-background: var(--yellow-800);
+
+  --tooltip-background: var(--white);
+  --tooltip-text: var(--neutral-800);
+}
+
+/* Spacing System
+ * A consistent set of spacing values used throughout the interface
+ * Based on a 4px grid system, scaling up in increments
+ */
+:root {
+  /* Base Spacing Units */
+  --space-4: 4px;    /* Numbers/4  - Smallest spacing unit */
+  --space-8: 8px;    /* Numbers/8  - Common for small gaps */
+  --space-12: 12px;  /* Numbers/12 - Compact spacing */
+  --space-16: 16px;  /* Numbers/16 - Standard spacing */
+  --space-24: 24px;  /* Numbers/24 - Medium spacing */
+  --space-32: 32px;  /* Numbers/32 - Large spacing */
+  --space-40: 40px;  /* Numbers/40 - Extra large spacing */
+  --space-48: 48px;  /* Numbers/48 - Maximum spacing */
+}
+
+/* Corner Radius System
+ * A set of border radius values for consistent component shapes
+ */
+:root {
+  /* Border Radius Values */
+  --radius-0: 0px;      /* Numbers/0   - Square corners */
+  --radius-8: 8px;      /* Numbers/8   - Small rounded corners */
+  --radius-12: 12px;    /* Numbers/12  - Standard rounded corners */
+  --radius-16: 16px;    /* Numbers/16  - Large rounded corners */
+  --radius-pill: 999px; /* Numbers/9999 - Fully rounded / Pill shape */
+}
+
+/* Typography System
+ * Our design system uses two categories of text styles:
+ * 1. Typography: For general text hierarchy (H1-H6, Body, etc.)
+ * 2. Components: For specific UI component text styles
+ */
+
+:root {
+  /* Font Families */
+  --font-primary: 'PP Neue Montreal', sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Typography Styles */
+  --font-size-h1: 40px;
+  --line-height-h1: 120%;
+  
+  --font-size-h2: 32px;
+  --line-height-h2: 120%;
+  
+  --font-size-h3: 24px;
+  --line-height-h3: 133%;
+  
+  --font-size-h4: 20px;
+  --line-height-h4: 160%;
+  
+  --font-size-h5: 16px;
+  --line-height-h5: 150%;
+  
+  --font-size-h6: 14px;
+  --line-height-h6: 160%;
+  
+  --font-size-body1: 16px;
+  --line-height-body1: 150%;
+  
+  --font-size-body2: 14px;
+  --line-height-body2: 150%;
+  
+  --font-size-subtitle1: 16px;
+  --line-height-subtitle1: 150%;
+  
+  --font-size-subtitle2: 14px;
+  --line-height-subtitle2: 150%;
+  
+  --font-size-overline: 12px;
+  --line-height-overline: 150%;
+  
+  --font-size-caption: 12px;
+  --line-height-caption: 166%;
+
+  /* Component Text Styles */
+  --font-size-alert-title: 16px;
+  --line-height-alert-title: 150%;
+  
+  --font-size-avatar-initials: 16px;
+  --line-height-avatar-initials: 20px;
+  
+  --font-size-badge-label: 12px;
+  --line-height-badge-label: 20px;
+  
+  --font-size-button-large: 16px;
+  --line-height-button-large: 24px;
+  
+  --font-size-button-medium: 14px;
+  --line-height-button-medium: 24px;
+  
+  --font-size-button-small: 12px;
+  --line-height-button-small: 22px;
+  
+  --font-size-input-label: 12px;
+  --line-height-input-label: 12px;
+  
+  --font-size-helper-text: 12px;
+  --line-height-helper-text: 20px;
+  
+  --font-size-chip: 14px;
+  --line-height-chip: 18px;
+  
+  --font-size-tooltip: 14px;
+  --line-height-tooltip: 150%;
+  
+  --font-size-table-header: 16px;
+  --line-height-table-header: 24px;
+  
+  --font-size-menu-item: 16px;
+  --line-height-menu-item: 150%;
+  
+  --font-size-menu-item-dense: 14px;
+  --line-height-menu-item-dense: 18px;
+  
+  --font-size-list-subheader: 14px;
+  --line-height-list-subheader: 48px;
+  
+  --font-size-bottom-nav: 14px;
+  --line-height-bottom-nav: 166%;
+  
+  --font-size-input-text: 16px;
+  --line-height-input-text: 24px;
+}
+
+/* Typography Utility Classes */
+.h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+.h2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  font-weight: var(--font-weight-bold);
+}
+
+.h3 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+.h4 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+  font-weight: var(--font-weight-bold);
+}
+
+.h5 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+  font-weight: var(--font-weight-bold);
+}
+
+.h6 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+  font-weight: var(--font-weight-bold);
+}
+
+.body1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body1);
+  line-height: var(--line-height-body1);
+  font-weight: var(--font-weight-regular);
+}
+
+.body2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body2);
+  line-height: var(--line-height-body2);
+  font-weight: var(--font-weight-regular);
+}
+
+.subtitle1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-subtitle1);
+  line-height: var(--line-height-subtitle1);
+  font-weight: var(--font-weight-semibold);
+}
+
+.subtitle2 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-subtitle2);
+  line-height: var(--line-height-subtitle2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.overline {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-overline);
+  line-height: var(--line-height-overline);
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.caption {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+  font-weight: var(--font-weight-regular);
+}
+
+.alert-title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-alert-title);
+  line-height: var(--line-height-alert-title);
+  font-weight: var(--font-weight-semibold);
+}
+
+.avatar-initials {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-avatar-initials);
+  line-height: var(--line-height-avatar-initials);
+  font-weight: var(--font-weight-regular);
+}
+
+.badge-label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-badge-label);
+  line-height: var(--line-height-badge-label);
+  font-weight: var(--font-weight-regular);
+}
+
+.button-large {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-button-large);
+  line-height: var(--line-height-button-large);
+  font-weight: var(--font-weight-semibold);
+}
+
+.button-medium {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-button-medium);
+  line-height: var(--line-height-button-medium);
+  font-weight: var(--font-weight-semibold);
+}
+
+.button-small {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-button-small);
+  line-height: var(--line-height-button-small);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input-label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-input-label);
+  line-height: var(--line-height-input-label);
+  font-weight: var(--font-weight-medium);
+}
+
+.helper-text {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-helper-text);
+  line-height: var(--line-height-helper-text);
+  font-weight: var(--font-weight-regular);
+}
+
+.chip {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-chip);
+  line-height: var(--line-height-chip);
+  font-weight: var(--font-weight-medium);
+}
+
+.tooltip {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  font-weight: var(--font-weight-regular);
+}
+
+.table-header {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-table-header);
+  line-height: var(--line-height-table-header);
+  font-weight: var(--font-weight-semibold);
+}
+
+.menu-item {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-menu-item);
+  line-height: var(--line-height-menu-item);
+  font-weight: var(--font-weight-regular);
+}
+
+.menu-item-dense {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-menu-item-dense);
+  line-height: var(--line-height-menu-item-dense);
+  font-weight: var(--font-weight-regular);
+}
+
+.list-subheader {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-list-subheader);
+  line-height: var(--line-height-list-subheader);
+  font-weight: var(--font-weight-medium);
+}
+
+.bottom-nav {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-bottom-nav);
+  line-height: var(--line-height-bottom-nav);
+  font-weight: var(--font-weight-regular);
+}
+
+.input-text {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-input-text);
+  line-height: var(--line-height-input-text);
+  font-weight: var(--font-weight-regular);
+} 

@@ -1,0 +1,139 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/components/button-group/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.page_container__wwgXc {
+  padding: 2rem;
+}
+
+.page_header__ZAt_x {
+  margin-bottom: 2rem;
+}
+
+.page_title__9x4oQ {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.page_description__Z8_Fa {
+  font-size: var(--font-size-body1);
+  line-height: var(--line-height-body1);
+  color: var(--text-secondary);
+  margin: 0 0 3rem;
+  max-width: 800px;
+}
+
+.page_section__BDw6s {
+  margin-bottom: 3rem;
+}
+
+.page_sectionTitle__RRDBO {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 1.5rem;
+}
+
+.page_componentDemo___5RhE {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-12);
+} 
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/components/inputs/ButtonGroup.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.ButtonGroup_container__qzamg {
+  display: inline-flex;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  border-radius: 100px;
+}
+
+.ButtonGroup_container__qzamg.ButtonGroup_vertical__iWfoW {
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.ButtonGroup_button__3QevU {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: var(--color-white);
+  font-family: var(--font-pp-neue-montreal);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ButtonGroup_button__3QevU:first-child {
+  background-color: var(--color-primary-dark);
+}
+
+.ButtonGroup_button__3QevU:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Size variants */
+.ButtonGroup_large__rpTA6 .ButtonGroup_button__3QevU {
+  height: 40px;
+  padding: 8px 22px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.ButtonGroup_medium__gWf60 .ButtonGroup_button__3QevU {
+  height: 36px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.ButtonGroup_small__tfcOE .ButtonGroup_button__3QevU {
+  height: 30px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+/* Split button specific styles */
+.ButtonGroup_split__uxsVg .ButtonGroup_dropdownButton__j6ES7 {
+  padding: 6px 16px;
+  background-color: var(--color-primary-dark);
+}
+
+.ButtonGroup_split__uxsVg.ButtonGroup_small__tfcOE .ButtonGroup_dropdownButton__j6ES7 {
+  padding: 4px 10px;
+}
+
+.ButtonGroup_split__uxsVg.ButtonGroup_large__rpTA6 .ButtonGroup_dropdownButton__j6ES7 {
+  padding: 8px 16px;
+}
+
+.ButtonGroup_caretIcon__G58wJ {
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+}
+
+.ButtonGroup_small__tfcOE .ButtonGroup_caretIcon__G58wJ {
+  width: 18px;
+  height: 18px;
+}
+
+/* Divider styles */
+.ButtonGroup_divider__s3J9E {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ButtonGroup_vertical__iWfoW .ButtonGroup_divider__s3J9E {
+  width: 100%;
+  height: 1px;
+} 

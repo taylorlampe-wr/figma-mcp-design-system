@@ -1,0 +1,12 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
+.main {
+  padding-left: 280px; /* Match SideNav width */
+  min-height: 100vh;
+} 

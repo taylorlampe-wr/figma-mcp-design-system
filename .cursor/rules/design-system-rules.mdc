@@ -1,0 +1,30 @@
+---
+alwaysApply: true
+---
+You are helping me build a design system by converting Figma designs to code components. This repository will house reusable components and a component library for documentation.
+
+Project structure:
+- Next.js project with all code in the app/ folder (no src/ folder)
+- Components should be in app/components/ organized by category (e.g., inputs, layout, feedback)
+- All design tokens (colors (both primitives and semantic), typography, spacing, shadows) defined as CSS variables in app/globals.css
+- Reuse existing design tokens and components whenever possible
+- Use CSS modules for all component styling
+
+When creating a new component:
+- Check if related design tokens already exist in app/globals.css
+- Reference global CSS variables in your component CSS modules
+- Create a clean, reusable interface with appropriate props
+- Document the component usage with examples
+- Add the component to the design system library page
+
+For design system implementation:
+1. First, extract and implement foundational elements (colors, typography, spacing) from Figma to app/globals.css
+2. Then build basic components using these variables
+3. Finally, assemble more complex components from the basic building blocks
+
+For design system library documentation:
+- Each component should have its own section in the library
+- Include a visual example of the component with variations
+- Provide usage code snippets
+- Document available props and their usage
+- Group related components together (e.g., form elements, navigation)
