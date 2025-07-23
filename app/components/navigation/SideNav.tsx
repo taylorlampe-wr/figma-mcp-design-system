@@ -22,7 +22,33 @@ const navigation: NavSection[] = [
   {
     title: 'Inputs',
     items: [
+      { title: 'Button', href: '/inputs/button' },
+      { title: 'Checkbox', href: '/inputs/checkbox' },
       { title: 'Interactive Chip', href: '/inputs/chip' },
+      { title: 'Icon Button', href: '/inputs/icon-button' },
+      { title: 'Switch', href: '/inputs/switch' },
+      { title: 'Text Field', href: '/inputs/text-field' },
+    ]
+  },
+  {
+    title: 'Display',
+    items: [
+      { title: 'Avatar', href: '/display/avatar' },
+      { title: 'Badge', href: '/display/badge' },
+      { title: 'Typography', href: '/display/typography' },
+    ]
+  },
+  {
+    title: 'Feedback',
+    items: [
+      { title: 'Alert', href: '/feedback/alert' },
+    ]
+  },
+  {
+    title: 'Layout',
+    items: [
+      { title: 'Card', href: '/layout/card' },
+      { title: 'Divider', href: '/layout/divider' },
     ]
   }
 ]

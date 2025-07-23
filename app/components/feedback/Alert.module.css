@@ -1,0 +1,208 @@
+/* Alert Base Styles */
+.root {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body2);
+  line-height: var(--line-height-body2);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--radius-8);
+  padding: var(--space-8) var(--space-16);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+/* Message */
+.message {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-4) 0;
+}
+
+/* Icon */
+.icon {
+  display: flex;
+  opacity: 0.9;
+  padding: var(--space-4) 0;
+  flex-shrink: 0;
+}
+
+/* Action */
+.action {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--space-4) 0 var(--space-4) var(--space-16);
+  margin-left: auto;
+  margin-right: calc(var(--space-4) * -1);
+}
+
+/* Close Button */
+.closeButton {
+  background-color: transparent;
+  overflow: visible;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-4);
+  border-radius: var(--radius-8);
+  margin-right: calc(var(--space-8) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.54;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.closeButton:hover {
+  opacity: 1;
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Standard Variant */
+.standard.success {
+  color: var(--green-800);
+  background-color: var(--alert-success-background);
+}
+
+.standard.success .icon {
+  color: var(--alert-success-icon);
+}
+
+.standard.info {
+  color: var(--blue-800);
+  background-color: var(--alert-info-background);
+}
+
+.standard.info .icon {
+  color: var(--alert-info-icon);
+}
+
+.standard.warning {
+  color: var(--yellow-800);
+  background-color: var(--alert-warning-background);
+}
+
+.standard.warning .icon {
+  color: var(--alert-warning-icon);
+}
+
+.standard.error {
+  color: var(--red-800);
+  background-color: var(--alert-error-background);
+}
+
+.standard.error .icon {
+  color: var(--alert-error-icon);
+}
+
+/* Filled Variant */
+.filled.success {
+  background-color: var(--green-600);
+  color: var(--white);
+}
+
+.filled.info {
+  background-color: var(--blue-600);
+  color: var(--white);
+}
+
+.filled.warning {
+  background-color: var(--yellow-600);
+  color: var(--neutral-800);
+}
+
+.filled.error {
+  background-color: var(--red-600);
+  color: var(--white);
+}
+
+/* Outlined Variant */
+.outlined {
+  border: 1px solid;
+  background-color: transparent;
+}
+
+.outlined.success {
+  color: var(--green-800);
+  border-color: var(--green-600);
+}
+
+.outlined.success .icon {
+  color: var(--green-600);
+}
+
+.outlined.info {
+  color: var(--blue-800);
+  border-color: var(--blue-600);
+}
+
+.outlined.info .icon {
+  color: var(--blue-600);
+}
+
+.outlined.warning {
+  color: var(--yellow-800);
+  border-color: var(--yellow-600);
+}
+
+.outlined.warning .icon {
+  color: var(--yellow-600);
+}
+
+.outlined.error {
+  color: var(--red-800);
+  border-color: var(--red-600);
+}
+
+.outlined.error .icon {
+  color: var(--red-600);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .standard.success {
+  color: var(--green-200);
+  background-color: var(--alert-success-background);
+}
+
+[data-theme="dark"] .standard.info {
+  color: var(--blue-200);
+  background-color: var(--alert-info-background);
+}
+
+[data-theme="dark"] .standard.warning {
+  color: var(--yellow-200);
+  background-color: var(--alert-warning-background);
+}
+
+[data-theme="dark"] .standard.error {
+  color: var(--red-200);
+  background-color: var(--alert-error-background);
+}
+
+[data-theme="dark"] .outlined.success {
+  color: var(--green-200);
+  border-color: var(--green-400);
+}
+
+[data-theme="dark"] .outlined.info {
+  color: var(--blue-200);
+  border-color: var(--blue-400);
+}
+
+[data-theme="dark"] .outlined.warning {
+  color: var(--yellow-200);
+  border-color: var(--yellow-400);
+}
+
+[data-theme="dark"] .outlined.error {
+  color: var(--red-200);
+  border-color: var(--red-400);
+}

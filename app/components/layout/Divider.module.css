@@ -1,0 +1,128 @@
+/* Divider Base Styles */
+.root {
+  margin: 0;
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--border-divider);
+  border-bottom-width: thin;
+}
+
+/* Orientation */
+.horizontal {
+  border-bottom-width: 1px;
+  width: 100%;
+}
+
+.vertical {
+  border-right-width: 1px;
+  border-bottom-width: 0;
+  height: 100%;
+  width: 0;
+}
+
+/* Flex Item */
+.flexItem {
+  align-self: stretch;
+  height: auto;
+}
+
+/* Light */
+.light {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Variants */
+.fullWidth {
+  width: 100%;
+}
+
+.inset {
+  margin-left: 72px;
+}
+
+.middle {
+  margin-left: var(--space-16);
+  margin-right: var(--space-16);
+}
+
+.middle.vertical {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+/* Absolute */
+.absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* With Children */
+.withChildren {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  border: 0;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body2);
+  line-height: var(--line-height-body2);
+  color: var(--text-secondary);
+}
+
+.withChildren::before,
+.withChildren::after {
+  position: relative;
+  width: 100%;
+  border-top: thin solid var(--border-divider);
+  top: 50%;
+  content: '';
+  transform: translateY(50%);
+}
+
+/* Text Alignment */
+.center::before,
+.center::after {
+  width: 100%;
+}
+
+.left::before {
+  width: 5%;
+}
+
+.left::after {
+  width: 95%;
+}
+
+.right::before {
+  width: 95%;
+}
+
+.right::after {
+  width: 5%;
+}
+
+/* Wrapper */
+.wrapper {
+  display: inline-block;
+  padding-left: calc(var(--space-8) * 1.2);
+  padding-right: calc(var(--space-8) * 1.2);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .root {
+  border-color: var(--border-divider);
+}
+
+[data-theme="dark"] .light {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .withChildren::before,
+[data-theme="dark"] .withChildren::after {
+  border-top-color: var(--border-divider);
+}

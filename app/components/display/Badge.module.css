@@ -1,0 +1,119 @@
+/* Badge Base Styles */
+.root {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-badge-label);
+  line-height: var(--line-height-badge-label);
+  min-width: 20px;
+  border-radius: var(--radius-pill);
+  z-index: 1;
+  transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+/* Standard Variant */
+.standard {
+  height: 20px;
+  padding: 0 var(--space-8);
+}
+
+/* Dot Variant */
+.dot {
+  min-width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* Color Variants */
+.default {
+  background-color: var(--neutral-500);
+  color: var(--white);
+}
+
+.primary {
+  background-color: var(--action-primary);
+  color: var(--action-on-background);
+}
+
+.secondary {
+  background-color: var(--neutral-600);
+  color: var(--white);
+}
+
+.error {
+  background-color: var(--action-destructive);
+  color: var(--action-on-background);
+}
+
+.info {
+  background-color: var(--blue-600);
+  color: var(--action-on-background);
+}
+
+.success {
+  background-color: var(--green-600);
+  color: var(--action-on-background);
+}
+
+.warning {
+  background-color: var(--yellow-600);
+  color: var(--neutral-800);
+}
+
+/* Position Variants */
+.topRight {
+  top: 0;
+  right: 0;
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+  transform: scale(1) translate(50%, 50%);
+  transform-origin: 100% 100%;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+  transform: scale(1) translate(-50%, 50%);
+  transform-origin: 0% 100%;
+}
+
+/* Invisible State */
+.invisible {
+  transform: scale(0);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .default {
+  background-color: var(--neutral-400);
+}
+
+[data-theme="dark"] .secondary {
+  background-color: var(--neutral-500);
+}
